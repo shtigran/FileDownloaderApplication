@@ -44,17 +44,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(369, 306);
+            this.button6.Location = new System.Drawing.Point(366, 26);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(73, 30);
             this.button6.TabIndex = 9;
@@ -67,7 +70,7 @@
             // 
             this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(80, 306);
+            this.button7.Location = new System.Drawing.Point(75, 26);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(73, 30);
             this.button7.TabIndex = 10;
@@ -80,7 +83,7 @@
             // 
             this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(296, 306);
+            this.button8.Location = new System.Drawing.Point(293, 26);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(73, 30);
             this.button8.TabIndex = 11;
@@ -93,7 +96,7 @@
             // 
             this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(225, 306);
+            this.button9.Location = new System.Drawing.Point(222, 26);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(73, 30);
             this.button9.TabIndex = 12;
@@ -106,7 +109,7 @@
             // 
             this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button10.Location = new System.Drawing.Point(153, 306);
+            this.button10.Location = new System.Drawing.Point(150, 26);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(73, 30);
             this.button10.TabIndex = 13;
@@ -119,7 +122,7 @@
             // 
             this.button11.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button11.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button11.Location = new System.Drawing.Point(6, 306);
+            this.button11.Location = new System.Drawing.Point(3, 26);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(73, 30);
             this.button11.TabIndex = 14;
@@ -132,7 +135,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(73, 280);
+            this.label2.Location = new System.Drawing.Point(77, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(319, 19);
             this.label2.TabIndex = 15;
@@ -166,9 +169,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FileDownloaderApplication.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(442, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(442, 44);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 324);
+            this.pictureBox1.Size = new System.Drawing.Size(170, 292);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -247,20 +250,41 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(481, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 23);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Help";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.button7);
+            this.groupBox2.Controls.Add(this.button8);
+            this.groupBox2.Controls.Add(this.button11);
+            this.groupBox2.Controls.Add(this.button9);
+            this.groupBox2.Controls.Add(this.button10);
+            this.groupBox2.Location = new System.Drawing.Point(3, 287);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(433, 56);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Files";
+            this.groupBox2.Visible = false;
+            // 
             // FileDownloader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(618, 348);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -276,6 +300,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,6 +324,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
