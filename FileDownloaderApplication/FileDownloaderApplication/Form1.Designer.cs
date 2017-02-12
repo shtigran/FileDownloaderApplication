@@ -57,9 +57,9 @@
             // 
             this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(366, 26);
+            this.button6.Location = new System.Drawing.Point(363, 26);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(73, 30);
+            this.button6.Size = new System.Drawing.Size(70, 30);
             this.button6.TabIndex = 9;
             this.button6.Text = "Programs";
             this.button6.UseVisualStyleBackColor = false;
@@ -70,7 +70,7 @@
             // 
             this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(75, 26);
+            this.button7.Location = new System.Drawing.Point(74, 26);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(73, 30);
             this.button7.TabIndex = 10;
@@ -83,7 +83,7 @@
             // 
             this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(293, 26);
+            this.button8.Location = new System.Drawing.Point(291, 26);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(73, 30);
             this.button8.TabIndex = 11;
@@ -96,7 +96,7 @@
             // 
             this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(222, 26);
+            this.button9.Location = new System.Drawing.Point(218, 26);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(73, 30);
             this.button9.TabIndex = 12;
@@ -109,7 +109,7 @@
             // 
             this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button10.Location = new System.Drawing.Point(150, 26);
+            this.button10.Location = new System.Drawing.Point(146, 26);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(73, 30);
             this.button10.TabIndex = 13;
@@ -150,7 +150,6 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(423, 160);
             this.textBox2.TabIndex = 4;
             this.textBox2.Visible = false;
@@ -159,7 +158,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::FileDownloaderApplication.Properties.Resources.your_ad_here;
-            this.pictureBox3.Location = new System.Drawing.Point(225, 137);
+            this.pictureBox3.Location = new System.Drawing.Point(233, 138);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(197, 116);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -258,6 +257,7 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Help";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
@@ -268,7 +268,7 @@
             this.groupBox2.Controls.Add(this.button11);
             this.groupBox2.Controls.Add(this.button9);
             this.groupBox2.Controls.Add(this.button10);
-            this.groupBox2.Location = new System.Drawing.Point(3, 287);
+            this.groupBox2.Location = new System.Drawing.Point(0, 287);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(433, 56);
             this.groupBox2.TabIndex = 18;

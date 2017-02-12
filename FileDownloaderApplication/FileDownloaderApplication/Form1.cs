@@ -350,6 +350,11 @@ namespace FileDownloaderApplication
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Welcome To The File Downloader...\r\n\r\nPlease enter valid URL and Download all files from that website:\r\nTextFiles, Pictures, Music, Video, Archives and Programs.\r\nContacts: shakhbekyantigran@gmail.com");
+        }
     }
 
 }
