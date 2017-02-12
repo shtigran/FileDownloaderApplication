@@ -93,7 +93,8 @@ namespace FileDownloaderApplication
                         if (item.Contains(".txt") || item.Contains(".doc") || item.Contains(".docx") || item.Contains(".pdf "))
                         {
                             if (!Directory.Exists(dir + "\\TextFiles"))
-                                Directory.CreateDirectory(dir + "\\TextFiles");
+                                Directory.CreateDirectory(dir + "\\TextFiles");   
+
 
                             try
                             {
