@@ -59,8 +59,8 @@ namespace FileDownloaderApplication
         {
 
 
-            if (!Directory.Exists(dir + "\\TextFiles"))
-                Directory.CreateDirectory(dir + "\\TextFiles");
+            if (!Directory.Exists($"{dir} + \\{files}"))
+                Directory.CreateDirectory($"{dir} + \\{files}");
 
             using (WebClient client = new WebClient())
                 foreach (var item in result)
@@ -69,7 +69,7 @@ namespace FileDownloaderApplication
                     Uri uri = new Uri(item);
                     string[] split1 = item.Split(new Char[] { '/' });
                     filename = split1[split1.Length - 1];
-                    client.DownloadFile(uri, $"{dir}\\TextFiles\\{count}_{filename}");
+                    client.DownloadFile(uri, $"{dir}\\{files}\\{count}_{filename}");
 
                 }
 

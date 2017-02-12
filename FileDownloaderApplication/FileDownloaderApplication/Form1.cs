@@ -50,7 +50,7 @@ namespace FileDownloaderApplication
                 MessageBox.Show("Please enter valid URL!!!");
             else
             {
-                MessageBox.Show("Scanning of " + textBox1.Text+ "\r\nClick ok to continue");
+                MessageBox.Show("Scanning of " + textBox1.Text+ "\r\nClick OK to continue...");
                 path = textBox1.Text;
                 textBox2.Visible = true;                  
             
@@ -183,7 +183,7 @@ namespace FileDownloaderApplication
 
                     }
                     textBox2.AppendText($"\r\nThere are {TextFiles.Count + Pictures.Count + Music.Count + Videos.Count + Archives.Count + Programs.Count} files in {path}");
-                    textBox2.AppendText($"\r\nIncluding:\r\n\r\nText Files: {TextFiles.Count}\r\nPictures files: {Pictures.Count}\r\nMusic Files: {Music.Count}\r\nVideo Files: {Videos.Count}\r\nArchives Files: {Archives.Count}\r\nProgram Files: {Programs.Count}");
+                    textBox2.AppendText($"\r\nIncluding:\r\n\r\nText Files: {TextFiles.Count}\r\nPictures Files: {Pictures.Count}\r\nMusic Files: {Music.Count}\r\nVideo Files: {Videos.Count}\r\nArchives Files: {Archives.Count}\r\nProgram Files: {Programs.Count}");
                     textBox2.AppendText("\r\n**************************************");
                     button6.Visible = true;
                     button7.Visible = true;
@@ -253,12 +253,7 @@ namespace FileDownloaderApplication
 
         }
 
-
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -287,6 +282,19 @@ namespace FileDownloaderApplication
                 f2.ShowDialog();
             }
             
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            if (Pictures.Count == 0)
+                MessageBox.Show("No Files of this type!!!");
+            else
+            {
+                Form2 f2 = new Form2();
+                f2.result = Pictures;
+                f2.files = "Pictures";
+                f2.ShowDialog();
+            }
         }
     }
 
