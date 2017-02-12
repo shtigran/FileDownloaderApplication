@@ -38,12 +38,12 @@ namespace FileDownloaderApplication
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            this.AcceptButton = button1;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           
             if (!Uri.IsWellFormedUriString(textBox1.Text, UriKind.RelativeOrAbsolute))
                 MessageBox.Show("Please enter valid URL!!!1");
             else if (!textBox1.Text.Contains("http") )
@@ -65,7 +65,7 @@ namespace FileDownloaderApplication
                     // Recieving the lines of each file
                     string[] split = all.Split(new Char[] { '\n' });
                     if (path == "https://mail.ru/") split[21] = split[8]; // Bug finded                 
-                    textBox2.Text = "There are the following files:\r\n ";
+                    textBox2.Text = "**************************************\r\nThere are the following files:\r\n ";
 
                     string dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // For download direction
 
@@ -182,7 +182,8 @@ namespace FileDownloaderApplication
                         #endregion
 
                     }
-                    textBox2.Text += $"\r\n\r\nThere are {TextFiles.Count + Pictures.Count + Music.Count + Videos.Count + Archives.Count + Programs.Count} files in {path}";
+                    textBox2.AppendText($"\r\n\r\nThere are {TextFiles.Count + Pictures.Count + Music.Count + Videos.Count + Archives.Count + Programs.Count} files in {path}");
+                    textBox2.AppendText($"\r\nIncluding:\r\n");
                 }
             }
         }
@@ -209,7 +210,7 @@ namespace FileDownloaderApplication
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
 
