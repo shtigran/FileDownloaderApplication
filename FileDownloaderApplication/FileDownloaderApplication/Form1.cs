@@ -257,13 +257,17 @@ namespace FileDownloaderApplication
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            if (Archives.Count == 0)
+                MessageBox.Show("No Files of this type!!!");
+            else
+            {
+                Form2 f2 = new Form2();
+                f2.result = Archives;
+                f2.files = "Archives";
+                f2.ShowDialog();
+            }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label2_Click_1(object sender, EventArgs e)
         {
@@ -293,6 +297,45 @@ namespace FileDownloaderApplication
                 Form2 f2 = new Form2();
                 f2.result = Pictures;
                 f2.files = "Pictures";
+                f2.ShowDialog();
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (Music.Count == 0)
+                MessageBox.Show("No Files of this type!!!");
+            else
+            {
+                Form2 f2 = new Form2();
+                f2.result = Music;
+                f2.files = "Music";
+                f2.ShowDialog();
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (Videos.Count == 0)
+                MessageBox.Show("No Files of this type!!!");
+            else
+            {
+                Form2 f2 = new Form2();
+                f2.result = Videos;
+                f2.files = "Video";
+                f2.ShowDialog();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (Programs.Count == 0)
+                MessageBox.Show("No Files of this type!!!");
+            else
+            {
+                Form2 f2 = new Form2();
+                f2.result = Programs;
+                f2.files = "Programs";
                 f2.ShowDialog();
             }
         }

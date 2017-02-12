@@ -69,6 +69,7 @@
             this.button6.Text = "Programs";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -107,6 +108,7 @@
             this.button9.Text = "Video";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Visible = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -119,6 +121,7 @@
             this.button10.Text = "Music";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Visible = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
