@@ -14,12 +14,21 @@ using System.Windows.Forms;
 namespace FileDownloaderApplication
 {
     public partial class FileDownloader : Form
-    {
+    {   
+        // Variables for string data
         string path = string.Empty;
         string all = string.Empty;
         string htmlCode = string.Empty;
         string path1 = string.Empty;
         string filename = string.Empty;
+
+        // Lists for any types
+        List<string> TextFiles = new List<string>();
+        List<string> Pictures = new List<string>();
+        List<string> Music = new List<string>();
+        List<string> Videos = new List<string>();
+        List<string> Archives = new List<string>();
+        List<string> Programs = new List<string>();
 
 
         public FileDownloader()
@@ -41,7 +50,7 @@ namespace FileDownloaderApplication
                 MessageBox.Show("Please enter valid URL!!!2");
             else
             {
-                MessageBox.Show("Scanning of " + textBox1.Text);
+                MessageBox.Show("Scanning of " + textBox1.Text+ "\r\nClick ok to continue");
                 path = textBox1.Text;
                 textBox2.Visible = true;                  
             
@@ -60,8 +69,7 @@ namespace FileDownloaderApplication
 
                     string dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // For download direction
 
-
-                    int count = 0;
+                    // Counters for any type
                     int countText = 0;
                     int countPictures = 0;
                     int countMusic = 0;
@@ -71,13 +79,8 @@ namespace FileDownloaderApplication
 
                     foreach (var item in split)
                     {
-                        string[] split1 = item.Split(new Char[] { '/' });
-                        filename = split1[split1.Length - 1];
-
-
-
                         path1 = path + item;
-                        Uri uri = new Uri(path1);
+                       
 
                         if (item.Contains(".com") || item.Contains(".ru") || item.Contains(".net") || item.Contains(".ge") || item.Contains(".am") || item.Contains(".fm"))
 
@@ -86,22 +89,17 @@ namespace FileDownloaderApplication
                                 path1 = "http:" + item;
                             if (path.Contains("https"))
                                 path1 = "https:" + item;
-                            uri = new Uri(path1);
+                            
                         }
 
                         #region TextFiles
                         if (item.Contains(".txt") || item.Contains(".doc") || item.Contains(".docx") || item.Contains(".pdf "))
                         {
-                            if (!Directory.Exists(dir + "\\TextFiles"))
-                                Directory.CreateDirectory(dir + "\\TextFiles");   
-
-
+                         
                             try
                             {
-                                countText++;
-                                count++;
-                                textBox2.AppendText($"\r\nTextFile {countText}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\TextFiles\\{countText}_{filename}");
+                                TextFiles.Add(path1);
+                                countText++;                                
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
@@ -111,16 +109,12 @@ namespace FileDownloaderApplication
                         #region Pictures
                         if (item.Contains(".jpg") || item.Contains(".png") || item.Contains(".svg") || item.Contains(".gif") || item.Contains(".jpeg"))
                         {
-                            if (!Directory.Exists(dir + "\\Images"))
-                                Directory.CreateDirectory(dir + "\\Images");
+                          
 
                             try
                             {
-                                countPictures++;
-                                count++;
-                                textBox2.AppendText($"\r\nPicture {countPictures}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Images\\{countPictures}_{filename}");
-
+                                Pictures.Add(path1);
+                                countPictures++;                               
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
@@ -129,15 +123,12 @@ namespace FileDownloaderApplication
                         #region Music
                         if (item.Contains(".mp3") || item.Contains(".wav"))
                         {
-                            if (!Directory.Exists(dir + "\\Music"))
-                                Directory.CreateDirectory(dir + "\\Music");
+                         
 
                             try
                             {
-                                countMusic++;
-                                count++;
-                                textBox2.AppendText($"\r\nMusicFile {countMusic}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Music\\{countMusic}_{filename}");
+                                Music.Add(path1);
+                                countMusic++;                               
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
@@ -147,17 +138,13 @@ namespace FileDownloaderApplication
                         #region Videos
                         if (item.Contains(".3gp") || item.Contains(".avi") || item.Contains(".mp4") || item.Contains(".flv") || item.Contains(".mov"))
                         {
-                            if (!Directory.Exists(dir + "\\Videos"))
-                                Directory.CreateDirectory(dir + "\\Videos");
+                            
 
 
                             try
                             {
-                                countVideos++;
-                                count++;
-                                textBox2.AppendText($"\r\nVideoFIle {countVideos}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Videos\\{countVideos}_{filename}");
-
+                                Videos.Add(path1);
+                                countVideos++;                               
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
@@ -167,15 +154,12 @@ namespace FileDownloaderApplication
                         #region Archives
                         if (item.Contains(".rar") || item.Contains(".iso"))
                         {
-                            if (!Directory.Exists(dir + "\\Archives"))
-                                Directory.CreateDirectory(dir + "\\Archives");
+                           
 
                             try
                             {
-                                countArchives++;
-                                count++;
-                                textBox2.AppendText($"\r\nArchiveFile {countArchives}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Archives\\{countArchives}_{filename}");
+                                Archives.Add(path1);
+                                countArchives++;                               
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
@@ -185,15 +169,12 @@ namespace FileDownloaderApplication
                         #region Programs
                         if (item.Contains(".exe"))
                         {
-                            if (!Directory.Exists(dir + "\\Programs"))
-                                Directory.CreateDirectory(dir + "\\Programs");
+                            
 
                             try
                             {
-                                countPrograms++;
-                                count++;
-                                textBox2.AppendText($"\r\nProgramFile {countPrograms}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Programs\\{countPrograms}_{filename}");
+                                Programs.Add(path1);
+                                countPrograms++;                                
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
@@ -201,7 +182,7 @@ namespace FileDownloaderApplication
                         #endregion
 
                     }
-                    textBox2.Text += $"\r\n\r\nThere are {count} files in {path}";
+                    textBox2.Text += $"\r\n\r\nThere are {TextFiles.Count + Pictures.Count + Music.Count + Videos.Count + Archives.Count + Programs.Count} files in {path}";
                 }
             }
         }
@@ -256,6 +237,11 @@ namespace FileDownloaderApplication
                 result += m.ToString() + "\n";
             }
             return result;
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 
