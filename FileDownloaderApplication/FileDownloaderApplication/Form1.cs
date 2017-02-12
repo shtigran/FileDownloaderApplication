@@ -56,7 +56,7 @@ namespace FileDownloaderApplication
                     // Recieving the lines of each file
                     string[] split = all.Split(new Char[] { '\n' });
                     if (path == "https://mail.ru/") split[21] = split[8]; // Bug finded                 
-                    textBox2.Text = "There are the following files: ";
+                    textBox2.Text = "There are the following files:\r\n ";
 
                     string dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // For download direction
 
@@ -99,10 +99,10 @@ namespace FileDownloaderApplication
                             {
                                 countText++;
                                 count++;
-                                Console.WriteLine($"TextFile {countText}: {item}");
+                                textBox2.AppendText($"\r\nTextFile {countText}: {item}");
                                 client.DownloadFile(uri, $"{dir}\\TextFiles\\{countText}_{filename}");
                             }
-                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                            catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
 
                         #endregion
@@ -117,11 +117,11 @@ namespace FileDownloaderApplication
                             {
                                 countPictures++;
                                 count++;
-                                Console.WriteLine($"Picture {countPictures}: {item}");
+                                textBox2.AppendText($"\r\nPicture {countPictures}: {item}");
                                 client.DownloadFile(uri, $"{dir}\\Images\\{countPictures}_{filename}");
 
                             }
-                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                            catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
                         #endregion
 
@@ -135,10 +135,10 @@ namespace FileDownloaderApplication
                             {
                                 countMusic++;
                                 count++;
-                                Console.WriteLine($"MusicFile {countMusic}: {item}");
+                                textBox2.AppendText($"\r\nMusicFile {countMusic}: {item}");
                                 client.DownloadFile(uri, $"{dir}\\Music\\{countMusic}_{filename}");
                             }
-                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                            catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
 
                         #endregion
@@ -154,11 +154,11 @@ namespace FileDownloaderApplication
                             {
                                 countVideos++;
                                 count++;
-                                Console.WriteLine($"VideoFIle {countVideos}: {item}");
+                                textBox2.AppendText($"\r\nVideoFIle {countVideos}: {item}");
                                 client.DownloadFile(uri, $"{dir}\\Videos\\{countVideos}_{filename}");
 
                             }
-                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                            catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
 
                         #endregion
@@ -173,10 +173,10 @@ namespace FileDownloaderApplication
                             {
                                 countArchives++;
                                 count++;
-                                Console.WriteLine($"ArchiveFile {countArchives}: {item}");
+                                textBox2.AppendText($"\r\nArchiveFile {countArchives}: {item}");
                                 client.DownloadFile(uri, $"{dir}\\Archives\\{countArchives}_{filename}");
                             }
-                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                            catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
 
                         #endregion
@@ -191,15 +191,16 @@ namespace FileDownloaderApplication
                             {
                                 countPrograms++;
                                 count++;
-                                Console.WriteLine($"ProgramFile {countPrograms}: {item}");
+                                textBox2.AppendText($"\r\nProgramFile {countPrograms}: {item}");
                                 client.DownloadFile(uri, $"{dir}\\Programs\\{countPrograms}_{filename}");
                             }
-                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                            catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
 
                         #endregion
 
                     }
+                    textBox2.Text += $"\nThere are {count} files in {path}";
                 }
             }
         }

@@ -71,7 +71,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(4, 40);
+            this.label1.Location = new System.Drawing.Point(4, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 14);
             this.label1.TabIndex = 2;
@@ -86,13 +86,13 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllUrl;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(40, 38);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(20);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(100);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(306, 19);
+            this.textBox1.Size = new System.Drawing.Size(306, 25);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Enter URL";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -116,6 +116,7 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(363, 211);
             this.textBox2.TabIndex = 4;
             this.textBox2.Visible = false;
