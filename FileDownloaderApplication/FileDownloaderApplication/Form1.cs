@@ -45,9 +45,9 @@ namespace FileDownloaderApplication
         {
            
             if (!Uri.IsWellFormedUriString(textBox1.Text, UriKind.RelativeOrAbsolute))
-                MessageBox.Show("Please enter valid URL!!!1");
+                MessageBox.Show("Please enter valid URL!!!");
             else if (!textBox1.Text.Contains("http") )
-                MessageBox.Show("Please enter valid URL!!!2");
+                MessageBox.Show("Please enter valid URL!!!");
             else
             {
                 MessageBox.Show("Scanning of " + textBox1.Text+ "\r\nClick ok to continue");

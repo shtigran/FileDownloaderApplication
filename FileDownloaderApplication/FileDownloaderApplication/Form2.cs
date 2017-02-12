@@ -13,7 +13,7 @@ namespace FileDownloaderApplication
     public partial class Form2 : Form
     {
         public List<string> result = new List<string>();
-        public string files;
+        public string files = string.Empty;
 
 
         public Form2()
@@ -23,12 +23,13 @@ namespace FileDownloaderApplication
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Text = $"There are the following {files}: ";
+            
         }
+    
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = $"The are the following :";
         }
     }
 }
