@@ -26,7 +26,7 @@ namespace FileDownloaderApplication
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,8 +36,12 @@ namespace FileDownloaderApplication
                 MessageBox.Show("Please enter valid URL!!!");
             else if (!textBox1.Text.Contains("http") || !textBox1.Text.Contains("https"))
                 MessageBox.Show("Please enter valid URL!!!");
-            else MessageBox.Show("Scanning of " + textBox1.Text);
-
+            else
+            {
+                MessageBox.Show("Scanning of " + textBox1.Text);
+                textBox2.Visible = true;
+            }
+            
 
 
         }
@@ -61,5 +65,13 @@ namespace FileDownloaderApplication
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
+
+
+
 }
