@@ -43,7 +43,13 @@ namespace FileDownloaderApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            TextFiles.Clear();
+            Pictures.Clear();
+            Music.Clear();
+            Videos.Clear();
+            Archives.Clear();
+            Programs.Clear();
+
             if (!Uri.IsWellFormedUriString(textBox1.Text, UriKind.RelativeOrAbsolute))
                 MessageBox.Show("Please enter valid URL!!!");
             else if (!textBox1.Text.Contains("http") )

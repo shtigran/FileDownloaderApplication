@@ -158,9 +158,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::FileDownloaderApplication.Properties.Resources.your_ad_here;
-            this.pictureBox3.Location = new System.Drawing.Point(233, 138);
+            this.pictureBox3.Location = new System.Drawing.Point(232, 138);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(197, 116);
+            this.pictureBox3.Size = new System.Drawing.Size(193, 116);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
@@ -268,6 +268,7 @@
             this.groupBox2.Controls.Add(this.button11);
             this.groupBox2.Controls.Add(this.button9);
             this.groupBox2.Controls.Add(this.button10);
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(0, 287);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(433, 56);
