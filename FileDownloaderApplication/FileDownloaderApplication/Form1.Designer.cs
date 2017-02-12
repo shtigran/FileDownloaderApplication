@@ -36,12 +36,12 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(433, 139);
+            this.textBox2.Size = new System.Drawing.Size(433, 148);
             this.textBox2.TabIndex = 4;
             this.textBox2.Visible = false;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -132,6 +132,18 @@
             this.button11.Visible = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(76, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(289, 19);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Choose the category bellow to see the files";
+            this.label2.Visible = false;
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FileDownloaderApplication.Properties.Resources.download;
@@ -202,18 +214,6 @@
             this.button1.Text = "Scan";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(76, 276);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(289, 19);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Choose the category bellow to see the files";
-            this.label2.Visible = false;
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // FileDownloader
             // 

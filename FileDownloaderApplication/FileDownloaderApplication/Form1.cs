@@ -253,12 +253,7 @@ namespace FileDownloaderApplication
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
-        }
+
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -282,10 +277,15 @@ namespace FileDownloaderApplication
 
         private void button11_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.result = TextFiles;
-            f2.files = "TextFiles";
-            f2.ShowDialog();
+            if (TextFiles.Count == 0)
+                MessageBox.Show("No Files of this type!!!");
+            else
+            {
+                Form2 f2 = new Form2();
+                f2.result = TextFiles;
+                f2.files = "TextFiles";
+                f2.ShowDialog();
+            }
             
         }
     }

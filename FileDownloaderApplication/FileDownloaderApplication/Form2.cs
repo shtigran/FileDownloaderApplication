@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -49,25 +50,29 @@ namespace FileDownloaderApplication
         }
 
         string dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // For download direction
-        Uri uri = new Uri("hello");
+        OpenFileDialog openFileDialog1 = new OpenFileDialog();
         string filename = string.Empty;
+        int count = 0;
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
             if (!Directory.Exists(dir + "\\TextFiles"))
                 Directory.CreateDirectory(dir + "\\TextFiles");
 
             using (WebClient client = new WebClient())
                 foreach (var item in result)
                 {
-
-                    uri = new Uri(item);
+                    count++;
+                    Uri uri = new Uri(item);
                     string[] split1 = item.Split(new Char[] { '/' });
                     filename = split1[split1.Length - 1];
-
+                    client.DownloadFile(uri, $"{dir}\\TextFiles\\{count}_{filename}");
 
                 }
 
+            textBox1.AppendText($"\r\n\r\nThe program downloaded all files...\r\n****************************************");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
