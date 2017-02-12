@@ -130,6 +130,7 @@
             this.button11.Text = "TextFiles";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Visible = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // pictureBox1
             // 
@@ -236,7 +237,7 @@
             this.MinimizeBox = false;
             this.Name = "FileDownloader";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FileDownloader";
+            this.Text = "File Downloader";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

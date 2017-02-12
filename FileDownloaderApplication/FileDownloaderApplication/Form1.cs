@@ -279,6 +279,15 @@ namespace FileDownloaderApplication
         {
 
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.result = TextFiles;
+            f2.files = "TextFiles";
+            f2.ShowDialog();
+            
+        }
     }
 
 }
