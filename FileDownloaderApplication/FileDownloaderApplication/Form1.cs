@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -57,7 +58,148 @@ namespace FileDownloaderApplication
                     if (path == "https://mail.ru/") split[21] = split[8]; // Bug finded                 
                     textBox2.Text = "There are the following files: ";
 
+                    string dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // For download direction
 
+
+                    int count = 0;
+                    int countText = 0;
+                    int countPictures = 0;
+                    int countMusic = 0;
+                    int countVideos = 0;
+                    int countArchives = 0;
+                    int countPrograms = 0;
+
+                    foreach (var item in split)
+                    {
+                        string[] split1 = item.Split(new Char[] { '/' });
+                        filename = split1[split1.Length - 1];
+
+
+
+                        path1 = path + item;
+                        Uri uri = new Uri(path1);
+
+                        if (item.Contains(".com") || item.Contains(".ru") || item.Contains(".net") || item.Contains(".ge") || item.Contains(".am") || item.Contains(".fm"))
+
+                        {
+                            if (path.Contains("http"))
+                                path1 = "http:" + item;
+                            if (path.Contains("https"))
+                                path1 = "https:" + item;
+                            uri = new Uri(path1);
+                        }
+
+                        #region TextFiles
+                        if (item.Contains(".txt") || item.Contains(".doc") || item.Contains(".docx") || item.Contains(".pdf "))
+                        {
+                            if (!Directory.Exists(dir + "\\TextFiles"))
+                                Directory.CreateDirectory(dir + "\\TextFiles");
+
+                            try
+                            {
+                                countText++;
+                                count++;
+                                Console.WriteLine($"TextFile {countText}: {item}");
+                                client.DownloadFile(uri, $"{dir}\\TextFiles\\{countText}_{filename}");
+                            }
+                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                        }
+
+                        #endregion
+
+                        #region Pictures
+                        if (item.Contains(".jpg") || item.Contains(".png") || item.Contains(".svg") || item.Contains(".gif") || item.Contains(".jpeg"))
+                        {
+                            if (!Directory.Exists(dir + "\\Images"))
+                                Directory.CreateDirectory(dir + "\\Images");
+
+                            try
+                            {
+                                countPictures++;
+                                count++;
+                                Console.WriteLine($"Picture {countPictures}: {item}");
+                                client.DownloadFile(uri, $"{dir}\\Images\\{countPictures}_{filename}");
+
+                            }
+                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                        }
+                        #endregion
+
+                        #region Music
+                        if (item.Contains(".mp3") || item.Contains(".wav"))
+                        {
+                            if (!Directory.Exists(dir + "\\Music"))
+                                Directory.CreateDirectory(dir + "\\Music");
+
+                            try
+                            {
+                                countMusic++;
+                                count++;
+                                Console.WriteLine($"MusicFile {countMusic}: {item}");
+                                client.DownloadFile(uri, $"{dir}\\Music\\{countMusic}_{filename}");
+                            }
+                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                        }
+
+                        #endregion
+
+                        #region Videos
+                        if (item.Contains(".3gp") || item.Contains(".avi") || item.Contains(".mp4") || item.Contains(".flv") || item.Contains(".mov"))
+                        {
+                            if (!Directory.Exists(dir + "\\Videos"))
+                                Directory.CreateDirectory(dir + "\\Videos");
+
+
+                            try
+                            {
+                                countVideos++;
+                                count++;
+                                Console.WriteLine($"VideoFIle {countVideos}: {item}");
+                                client.DownloadFile(uri, $"{dir}\\Videos\\{countVideos}_{filename}");
+
+                            }
+                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                        }
+
+                        #endregion
+
+                        #region Archives
+                        if (item.Contains(".rar") || item.Contains(".iso"))
+                        {
+                            if (!Directory.Exists(dir + "\\Archives"))
+                                Directory.CreateDirectory(dir + "\\Archives");
+
+                            try
+                            {
+                                countArchives++;
+                                count++;
+                                Console.WriteLine($"ArchiveFile {countArchives}: {item}");
+                                client.DownloadFile(uri, $"{dir}\\Archives\\{countArchives}_{filename}");
+                            }
+                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                        }
+
+                        #endregion
+
+                        #region Programs
+                        if (item.Contains(".exe"))
+                        {
+                            if (!Directory.Exists(dir + "\\Programs"))
+                                Directory.CreateDirectory(dir + "\\Programs");
+
+                            try
+                            {
+                                countPrograms++;
+                                count++;
+                                Console.WriteLine($"ProgramFile {countPrograms}: {item}");
+                                client.DownloadFile(uri, $"{dir}\\Programs\\{countPrograms}_{filename}");
+                            }
+                            catch (FileNotFoundException) { Console.WriteLine("This file not found!"); }
+                        }
+
+                        #endregion
+
+                    }
                 }
             }
         }
