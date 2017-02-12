@@ -29,7 +29,7 @@ namespace FileDownloaderApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = $"The are the following :";
+            textBox1.Text = $"The are the following {files}: ";
         }
     }
 }
