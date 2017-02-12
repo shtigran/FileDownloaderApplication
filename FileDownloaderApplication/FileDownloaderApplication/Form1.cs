@@ -100,7 +100,8 @@ namespace FileDownloaderApplication
                                 countText++;
                                 count++;
                                 textBox2.AppendText($"\r\nTextFile {countText}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\TextFiles\\{countText}_{filename}");
+                                Task.Factory.StartNew(() => client.DownloadFile(uri, $"{dir}\\TextFiles\\{countText}_{filename}"));
+                                
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
@@ -118,7 +119,8 @@ namespace FileDownloaderApplication
                                 countPictures++;
                                 count++;
                                 textBox2.AppendText($"\r\nPicture {countPictures}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Images\\{countPictures}_{filename}");
+                                Task.Factory.StartNew(() => client.DownloadFile(uri, $"{dir}\\Images\\{countPictures}_{filename}"));
+
 
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
@@ -136,7 +138,7 @@ namespace FileDownloaderApplication
                                 countMusic++;
                                 count++;
                                 textBox2.AppendText($"\r\nMusicFile {countMusic}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Music\\{countMusic}_{filename}");
+                                Task.Factory.StartNew(() => client.DownloadFile(uri, $"{dir}\\Music\\{countMusic}_{filename}"));
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
@@ -155,7 +157,7 @@ namespace FileDownloaderApplication
                                 countVideos++;
                                 count++;
                                 textBox2.AppendText($"\r\nVideoFIle {countVideos}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Videos\\{countVideos}_{filename}");
+                                Task.Factory.StartNew(() => client.DownloadFile(uri, $"{dir}\\Videos\\{countVideos}_{filename}"));
 
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
@@ -174,7 +176,7 @@ namespace FileDownloaderApplication
                                 countArchives++;
                                 count++;
                                 textBox2.AppendText($"\r\nArchiveFile {countArchives}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Archives\\{countArchives}_{filename}");
+                                Task.Factory.StartNew(() => client.DownloadFile(uri, $"{dir}\\Archives\\{countArchives}_{filename}"));
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
@@ -192,7 +194,7 @@ namespace FileDownloaderApplication
                                 countPrograms++;
                                 count++;
                                 textBox2.AppendText($"\r\nProgramFile {countPrograms}: {item}");
-                                client.DownloadFile(uri, $"{dir}\\Programs\\{countPrograms}_{filename}");
+                                Task.Factory.StartNew(() => client.DownloadFile(uri, $"{dir}\\Programs\\{countPrograms}_{filename}"));
                             }
                             catch (FileNotFoundException) { textBox2.Text = "This file not found!"; }
                         }
