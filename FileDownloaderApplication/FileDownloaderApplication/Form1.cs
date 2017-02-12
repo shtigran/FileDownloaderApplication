@@ -191,6 +191,7 @@ namespace FileDownloaderApplication
                     button9.Visible = true;
                     button10.Visible = true;
                     button11.Visible = true;
+                    label2.Visible = true;
                 }
             }
         }

@@ -53,7 +53,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(433, 148);
+            this.textBox2.Size = new System.Drawing.Size(433, 139);
             this.textBox2.TabIndex = 4;
             this.textBox2.Visible = false;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -205,11 +205,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(173, 280);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(76, 276);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 13);
+            this.label2.Size = new System.Drawing.Size(289, 19);
             this.label2.TabIndex = 15;
             this.label2.Text = "Choose the category bellow to see the files";
+            this.label2.Visible = false;
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // FileDownloader
