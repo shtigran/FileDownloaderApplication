@@ -100,6 +100,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Downloader.ico" />
+    <None Include="Resources\loading-animation.gif" />
+    <None Include="Resources\Please Wait - Loading Pie.gif" />
+    <None Include="Resources\wait.gif" />
+    <None Include="Resources\30579012-downloading-bar-illustration-design-over-a-blue-background-Stock-Vector.jpg" />
+    <None Include="Resources\679886.gif" />
+    <None Include="Resources\downloading.png" />
+    <None Include="Resources\shkarkim.jpg" />
     <None Include="Resources\unnamed %281%291.png" />
     <None Include="Resources\unnamed %281%29.png" />
     <None Include="Resources\search.png" />

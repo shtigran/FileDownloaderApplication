@@ -32,7 +32,7 @@ namespace FileDownloaderApplication
         private void button1_Click(object sender, EventArgs e)
         {
 
-            textBox1.Text = $"The are the following {files}: \r\n\r\n";
+            textBox1.Text = $"***********************************************\r\nThe are the following {files}: \r\n\r\n";
             int count = 0;
             foreach (string  str in result)
             {
@@ -42,6 +42,7 @@ namespace FileDownloaderApplication
                 
             }
             textBox1.AppendText($"\r\nThere are {count} files. \r\n");
+            textBox1.AppendText($"***********************************************");
             button2.Visible = true;
         }
 
