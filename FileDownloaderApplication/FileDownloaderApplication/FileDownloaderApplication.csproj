@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Downloader.ico" />
+    <None Include="Resources\your-ad-here.jpg" />
     <None Include="Resources\loading %281%29.gif" />
     <None Include="Resources\loading_spinner1.gif" />
     <None Include="Resources\loading_spinner.gif" />
