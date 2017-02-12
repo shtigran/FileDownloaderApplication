@@ -42,6 +42,7 @@ namespace FileDownloaderApplication
                 
             }
             textBox1.AppendText($"\r\nThere are {count} files. \r\n");
+            button2.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
