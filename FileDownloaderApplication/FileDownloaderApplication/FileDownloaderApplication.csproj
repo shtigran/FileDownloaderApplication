@@ -100,6 +100,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Downloader.ico" />
+    <None Include="Resources\loading %281%29.gif" />
+    <None Include="Resources\loading_spinner1.gif" />
+    <None Include="Resources\loading_spinner.gif" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\loading2.gif" />
+    <None Include="Resources\profile-loader.gif" />
     <None Include="Resources\loading-animation.gif" />
     <None Include="Resources\Please Wait - Loading Pie.gif" />
     <None Include="Resources\wait.gif" />
