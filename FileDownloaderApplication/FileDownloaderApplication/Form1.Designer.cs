@@ -112,6 +112,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FileDownloader";
             this.Text = "FileDownloader";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
