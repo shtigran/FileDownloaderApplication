@@ -42,9 +42,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FileDownloaderApplication.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(372, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(426, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 324);
+            this.pictureBox1.Size = new System.Drawing.Size(198, 324);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -61,7 +61,7 @@
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupBox1.Location = new System.Drawing.Point(3, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(363, 107);
+            this.groupBox1.Size = new System.Drawing.Size(417, 107);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Entering  URL";
@@ -71,7 +71,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(4, 43);
+            this.label1.Location = new System.Drawing.Point(51, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 14);
             this.label1.TabIndex = 2;
@@ -87,7 +87,7 @@
             this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllUrl;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(40, 38);
+            this.textBox1.Location = new System.Drawing.Point(97, 43);
             this.textBox1.Margin = new System.Windows.Forms.Padding(100);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -102,7 +102,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(243, 74);
+            this.button1.Location = new System.Drawing.Point(300, 79);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 27);
             this.button1.TabIndex = 1;
@@ -117,7 +117,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(363, 211);
+            this.textBox2.Size = new System.Drawing.Size(417, 211);
             this.textBox2.TabIndex = 4;
             this.textBox2.Visible = false;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -127,7 +127,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(540, 348);
+            this.ClientSize = new System.Drawing.Size(618, 348);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);

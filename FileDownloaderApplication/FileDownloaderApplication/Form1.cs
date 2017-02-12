@@ -36,9 +36,9 @@ namespace FileDownloaderApplication
         {
 
             if (!Uri.IsWellFormedUriString(textBox1.Text, UriKind.RelativeOrAbsolute))
-                MessageBox.Show("Please enter valid URL!!!");
-            else if (!textBox1.Text.Contains("http") || !textBox1.Text.Contains("https"))
-                MessageBox.Show("Please enter valid URL!!!");
+                MessageBox.Show("Please enter valid URL!!!1");
+            else if (!textBox1.Text.Contains("http") )
+                MessageBox.Show("Please enter valid URL!!!2");
             else
             {
                 MessageBox.Show("Scanning of " + textBox1.Text);
@@ -200,7 +200,7 @@ namespace FileDownloaderApplication
                         #endregion
 
                     }
-                    textBox2.Text += $"\r\nThere are {count} files in {path}";
+                    textBox2.Text += $"\r\n\r\nThere are {count} files in {path}";
                 }
             }
         }
