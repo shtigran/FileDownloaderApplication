@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.InputUrl = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -53,7 +53,7 @@
             this.groupBox1.BackgroundImage = global::FileDownloaderApplication.Properties.Resources._17_21_search_png24_posterized;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.InputUrl);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -64,6 +64,7 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Entering  URL";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -76,19 +77,19 @@
             this.label1.Text = "URL:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // InputUrl
+            // textBox1
             // 
-            this.InputUrl.AcceptsTab = true;
-            this.InputUrl.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
-            this.InputUrl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.InputUrl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllUrl;
-            this.InputUrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InputUrl.Location = new System.Drawing.Point(63, 24);
-            this.InputUrl.Multiline = true;
-            this.InputUrl.Name = "InputUrl";
-            this.InputUrl.Size = new System.Drawing.Size(197, 23);
-            this.InputUrl.TabIndex = 0;
-            this.InputUrl.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.AcceptsTab = true;
+            this.textBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllUrl;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(63, 24);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(197, 23);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -106,6 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(461, 288);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -121,7 +123,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox InputUrl;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;

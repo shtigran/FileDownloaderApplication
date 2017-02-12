@@ -14,8 +14,7 @@ namespace FileDownloaderApplication
     {
 
 
-
-
+        
 
         public FileDownloader()
         {
@@ -24,17 +23,28 @@ namespace FileDownloaderApplication
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Scanning of " + InputUrl.Text);
+
+            if (string.IsNullOrEmpty(textBox1.Text))
+                MessageBox.Show("Please enter URL!!!");
+            else if (!Uri.IsWellFormedUriString(textBox1.Text, UriKind.RelativeOrAbsolute))
+                MessageBox.Show("Please enter valid URL");
+            else MessageBox.Show("Scanning of " + textBox1.Text);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+           
         }
     }
 }
