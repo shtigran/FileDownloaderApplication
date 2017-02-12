@@ -29,10 +29,10 @@ namespace FileDownloaderApplication
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(textBox1.Text))
-                MessageBox.Show("Please enter URL!!!");
-            else if (!Uri.IsWellFormedUriString(textBox1.Text, UriKind.RelativeOrAbsolute))
-                MessageBox.Show("Please enter valid URL");
+            if (!Uri.IsWellFormedUriString(textBox1.Text, UriKind.RelativeOrAbsolute))
+                MessageBox.Show("Please enter valid URL!!!");
+            else if (!textBox1.Text.Contains("http") || !textBox1.Text.Contains("https"))
+                MessageBox.Show("Please enter valid URL!!!");
             else MessageBox.Show("Scanning of " + textBox1.Text);
 
         }
