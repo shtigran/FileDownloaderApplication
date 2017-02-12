@@ -56,11 +56,9 @@ namespace FileDownloaderApplication
         int count = 0;
 
         private void button2_Click(object sender, EventArgs e)
-        {
-
-
-            if (!Directory.Exists($"{dir} + \\{files}"))
-                Directory.CreateDirectory($"{dir} + \\{files}");
+        {   
+           if (!Directory.Exists($"{dir}\\{files}"))
+                Directory.CreateDirectory($"{dir}\\{files}");
 
             using (WebClient client = new WebClient())
                 foreach (var item in result)
