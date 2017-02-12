@@ -65,7 +65,7 @@ namespace FileDownloaderApplication
                     // Recieving the lines of each file
                     string[] split = all.Split(new Char[] { '\n' });
                     if (path == "https://mail.ru/") split[21] = split[8]; // Bug finded                 
-                    textBox2.Text = "**************************************\r\nThere are the following files:\r\n ";
+                    textBox2.Text = "**************************************";
 
                     string dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // For download direction
 
@@ -182,8 +182,15 @@ namespace FileDownloaderApplication
                         #endregion
 
                     }
-                    textBox2.AppendText($"\r\n\r\nThere are {TextFiles.Count + Pictures.Count + Music.Count + Videos.Count + Archives.Count + Programs.Count} files in {path}");
-                    textBox2.AppendText($"\r\nIncluding:\r\n");
+                    textBox2.AppendText($"\r\nThere are {TextFiles.Count + Pictures.Count + Music.Count + Videos.Count + Archives.Count + Programs.Count} files in {path}");
+                    textBox2.AppendText($"\r\nIncluding:\r\n\r\nText Files: {TextFiles.Count}\r\nPictures files: {Pictures.Count}\r\nMusic Files: {Music.Count}\r\nVideo Files: {Videos.Count}\r\nArchives Files: {Archives.Count}\r\nProgram Files: {Programs.Count}");
+                    textBox2.AppendText("\r\n**************************************");
+                    button6.Visible = true;
+                    button7.Visible = true;
+                    button8.Visible = true;
+                    button9.Visible = true;
+                    button10.Visible = true;
+                    button11.Visible = true;
                 }
             }
         }
@@ -241,6 +248,33 @@ namespace FileDownloaderApplication
         }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
         {
 
         }
