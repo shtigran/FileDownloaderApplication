@@ -137,11 +137,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(76, 280);
+            this.label2.Location = new System.Drawing.Point(73, 280);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(289, 19);
+            this.label2.Size = new System.Drawing.Size(319, 19);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Choose the category bellow to see the files";
+            this.label2.Text = "Choose The Category Bellow To See The Files";
             this.label2.Visible = false;
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
