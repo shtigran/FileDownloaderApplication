@@ -200,7 +200,7 @@ namespace FileDownloaderApplication
                         #endregion
 
                     }
-                    textBox2.Text += $"\nThere are {count} files in {path}";
+                    textBox2.Text += $"\r\nThere are {count} files in {path}";
                 }
             }
         }
