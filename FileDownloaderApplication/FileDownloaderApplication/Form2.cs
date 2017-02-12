@@ -30,6 +30,15 @@ namespace FileDownloaderApplication
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = $"The are the following {files}: ";
+            foreach (string  str in result)
+            {
+                textBox1.AppendText(str);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
