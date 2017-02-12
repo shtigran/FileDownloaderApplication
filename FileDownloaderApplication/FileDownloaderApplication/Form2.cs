@@ -23,7 +23,7 @@ namespace FileDownloaderApplication
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            textBox1.Text = $"There are the following {files}: ";
         }
 
         private void label1_Click(object sender, EventArgs e)
