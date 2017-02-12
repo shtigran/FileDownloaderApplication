@@ -100,6 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Downloader.ico" />
+    <None Include="Resources\unnamed %281%291.png" />
+    <None Include="Resources\unnamed %281%29.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\17-21_search_png24_posterized.png" />
   </ItemGroup>

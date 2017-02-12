@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,35 @@ namespace FileDownloaderApplication
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        string dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // For download direction
+        Uri uri = new Uri("hello");
+        string filename = string.Empty;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!Directory.Exists(dir + "\\TextFiles"))
+                Directory.CreateDirectory(dir + "\\TextFiles");
+
+            using (WebClient client = new WebClient())
+                foreach (var item in result)
+                {
+
+                    uri = new Uri(item);
+                    string[] split1 = item.Split(new Char[] { '/' });
+                    filename = split1[split1.Length - 1];
+
+
+                }
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+
 
         }
     }
