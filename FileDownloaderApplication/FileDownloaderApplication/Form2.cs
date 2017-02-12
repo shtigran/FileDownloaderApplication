@@ -29,11 +29,17 @@ namespace FileDownloaderApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = $"The are the following {files}: ";
+
+            textBox1.Text = $"The are the following {files}: \r\n\r\n";
+            int count = 0;
             foreach (string  str in result)
             {
-                textBox1.AppendText(str);
+                count++;
+                textBox1.AppendText($"File{count}: {str} \r\n");
+
+                
             }
+            textBox1.AppendText($"\r\nThere are {count} files. \r\n");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
