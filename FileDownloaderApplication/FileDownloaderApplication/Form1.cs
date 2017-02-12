@@ -353,7 +353,7 @@ namespace FileDownloaderApplication
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Welcome To The File Downloader...\r\n\r\nPlease enter valid URL and Download all files from that website:\r\nTextFiles, Pictures, Music, Video, Archives and Programs.\r\nContacts: shakhbekyantigran@gmail.com");
+            MessageBox.Show("Welcome To The File Downloader\r\n\r\nPlease enter valid URL and click Scan.\r\nAfter You can see all files by types:\r\nTextFiles, Pictures, Music, Video, Archives and Programs.\r\nThen You will be able to download Your preferred types.\r\n..........................................................................\r\n Contacts: shakhbekyantigran@gmail.com");
         }
     }
 
