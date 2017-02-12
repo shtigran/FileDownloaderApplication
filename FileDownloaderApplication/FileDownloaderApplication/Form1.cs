@@ -13,8 +13,11 @@ namespace FileDownloaderApplication
     public partial class FileDownloader : Form
     {
 
+        string all = string.Empty;
+        string htmlCode = string.Empty;
+        string path1 = string.Empty;
+        string filename = string.Empty;
 
-        
 
         public FileDownloader()
         {
@@ -35,6 +38,8 @@ namespace FileDownloaderApplication
                 MessageBox.Show("Please enter valid URL!!!");
             else MessageBox.Show("Scanning of " + textBox1.Text);
 
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,6 +50,11 @@ namespace FileDownloaderApplication
         private void groupBox1_Enter(object sender, EventArgs e)
         {
            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
