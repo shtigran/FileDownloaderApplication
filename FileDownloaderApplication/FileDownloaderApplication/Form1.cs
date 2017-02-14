@@ -15,6 +15,9 @@ namespace FileDownloaderApplication
 {
     public partial class FileDownloader : Form
     {   
+
+        //Try async
+      
         // Variables for string data
         string path = string.Empty;
         string all = string.Empty;
