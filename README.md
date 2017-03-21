@@ -67,8 +67,7 @@ public partial class FileDownloader : Form
             {
                 MessageBox.Show("Scanning of " + textBox1.Text+ "\r\nClick OK to continue...");
                 path = textBox1.Text;
-                textBox2.Visible = true;                  
-            
+                textBox2.Visible = true;                             
                 using (WebClient client = new WebClient()) // WebClient class inherits IDisposable 
                 {
                     // Downoload the HTML code of URL
@@ -96,7 +95,6 @@ public partial class FileDownloader : Form
                     {
                         path1 = path + item;
                        
-
                         if (item.Contains(".com") || item.Contains(".ru") || item.Contains(".net") || item.Contains(".ge") || item.Contains(".am") || item.Contains(".fm"))
 
                         {
@@ -109,8 +107,7 @@ public partial class FileDownloader : Form
 
                         #region TextFiles
                         if (item.Contains(".txt") || item.Contains(".doc") || item.Contains(".docx") || item.Contains(".pdf "))
-                        {
-                         
+                        {                         
                             try
                             {
                                 TextFiles.Add(path1);
@@ -123,9 +120,7 @@ public partial class FileDownloader : Form
 
                         #region Pictures
                         if (item.Contains(".jpg") || item.Contains(".png") || item.Contains(".svg") || item.Contains(".gif") || item.Contains(".jpeg"))
-                        {
-                          
-
+                        {                          
                             try
                             {
                                 Pictures.Add(path1);
@@ -138,8 +133,6 @@ public partial class FileDownloader : Form
                         #region Music
                         if (item.Contains(".mp3") || item.Contains(".wav"))
                         {
-                         
-
                             try
                             {
                                 Music.Add(path1);
@@ -153,9 +146,6 @@ public partial class FileDownloader : Form
                         #region Videos
                         if (item.Contains(".3gp") || item.Contains(".avi") || item.Contains(".mp4") || item.Contains(".flv") || item.Contains(".mov"))
                         {
-                            
-
-
                             try
                             {
                                 Videos.Add(path1);
@@ -169,7 +159,6 @@ public partial class FileDownloader : Form
                         #region Archives
                         if (item.Contains(".rar") || item.Contains(".iso"))
                         {
-                           
 
                             try
                             {
@@ -184,8 +173,6 @@ public partial class FileDownloader : Form
                         #region Programs
                         if (item.Contains(".exe"))
                         {
-                            
-
                             try
                             {
                                 Programs.Add(path1);
@@ -236,8 +223,6 @@ public partial class FileDownloader : Form
         {
             
         }
-
-
 
         // Method For correct url if it is Suburl
         private static string ForUrl(string path)
